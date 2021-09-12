@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
-using System;
-using UnityEngine.UI;
+
 
 public enum playerEnum { IsPlay, Stop }
 
@@ -37,7 +36,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         if (isPlay == false) { return; }
-        if (player.clip != null && ((float)player.clockTime) == ((float)player.length) && isPlay == true) { isPlay = false; scr.s.TimeForEach(); }
+        if (player.clip != null && ((float)player.clockTime) == ((float)player.length) && isPlay == true) { isPlay = false; MainClick.s.ButtonTextScreen(); }
     }
 
     

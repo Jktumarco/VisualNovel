@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scr : MonoBehaviour
+public class MainClick : MonoBehaviour
 {
-    public static scr s;
+    public static MainClick s;
 
     private void Awake()
     {
@@ -23,12 +23,12 @@ public class scr : MonoBehaviour
         Player.s.isPlay = true;
     }
 
-    public void TimeForEach()
+    public void ButtonTextScreen()
     {
         int T = 0;
         foreach (var item in Player.s.CurrVideo().refVideo)
         {
-            print(item);
+            //print(item);
             Player.s.ButtonIsActive(Player.s.listButtons[T], true);
             ButtonTextOnSceen(T);
             T++;
